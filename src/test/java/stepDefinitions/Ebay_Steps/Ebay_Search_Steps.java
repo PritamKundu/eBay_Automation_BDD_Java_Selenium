@@ -55,31 +55,59 @@ public class Ebay_Search_Steps {
         Thread.sleep(2000);
     }
 
-    @And("Select item color {string}")
-    public void selectItemColor(String color) throws InterruptedException {
+    @And("Select item color")
+    public void selectItemColor() throws InterruptedException {
+
         try {
-            Select colors = new Select(ebayItemSearchPage.setItemColor());
-            colors.selectByVisibleText(color);
+            ebayItemSearchPage.setItemColor().click();
             Thread.sleep(2000);
+
+            try {
+                ebayItemSearchPage.setItemColorSelect().click();
+                Thread.sleep(2000);
+            }
+            catch (Exception c){
+                ebayItemSearchPage.setItemColorSelected().click();
+                Thread.sleep(2000);
+            }
         }
+
         catch (Exception e){
-            Select colors = new Select(ebayItemSearchPage.setItemColor2());
-            colors.selectByVisibleText(color);
+            ebayItemSearchPage.setItemColor2().click();
             Thread.sleep(2000);
+
+            try {
+                ebayItemSearchPage.setItemColor2Select().click();
+                Thread.sleep(2000);
+            }
+            catch (Exception c1){
+                ebayItemSearchPage.setItemColor2Selected().click();
+                Thread.sleep(2000);
+            }
         }
     }
 
-    @When("Select item storage capacity {string}")
-    public void selectItemStorageCapacity(String storage) throws InterruptedException {
+    @When("Select item storage capacity")
+    public void selectItemStorageCapacity() throws InterruptedException {
         try {
-                Select colors = new Select(ebayItemSearchPage.setItemStorage());
-                colors.selectByVisibleText(storage);
-                Thread.sleep(2000);
+            ebayItemSearchPage.setItemStorage().click();
+            Thread.sleep(2000);
+            ebayItemSearchPage.setItemStorageSelect().click();
+            Thread.sleep(2000);
         }
+
         catch (Exception e){
-                 System.out.println("item storage capacity not found");
+            try {
+                ebayItemSearchPage.setItemStorage2().click();
+                Thread.sleep(2000);
+                ebayItemSearchPage.setItemStorage2Select().click();
+                Thread.sleep(2000);
+            }
+            catch (Exception e1){
+                System.out.println("storage not found !");
+            }
+
         }
-        Thread.sleep(2000);
     }
 
     @And("Add item quantity {string}")

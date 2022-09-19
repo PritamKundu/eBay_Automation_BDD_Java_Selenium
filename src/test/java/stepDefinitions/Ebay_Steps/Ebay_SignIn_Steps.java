@@ -28,7 +28,7 @@ public class Ebay_SignIn_Steps {
     @When("Enter username")
     public void enterUsername() throws InterruptedException {
         Assert.assertTrue(ebayLoginPage.setUserName().isDisplayed());
-        ebayLoginPage.setUserName().sendKeys("pranta_sqa@ccmail.uk");
+        ebayLoginPage.setUserName().sendKeys("foepepask@neko2.net");
         Thread.sleep(2000);
     }
 
@@ -43,7 +43,7 @@ public class Ebay_SignIn_Steps {
     @When("Enter password")
     public void enterPassword() throws InterruptedException {
         Assert.assertTrue(ebayLoginPage.setPassword().isDisplayed());
-        ebayLoginPage.setPassword().sendKeys("12Pranta@#");
+        ebayLoginPage.setPassword().sendKeys("Ab1234@#");
         Thread.sleep(2000);
     }
 

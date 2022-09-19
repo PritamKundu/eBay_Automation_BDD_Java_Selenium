@@ -45,6 +45,6 @@ public class Ebay_AddToCart_Steps {
     public void verityTheItemPrice() {
         Assert.assertTrue(ebayItemAddToCartPage.setItemPrice().isDisplayed());
     }
-}
 
+}
 

@@ -11,10 +11,10 @@ Feature: Verify Ebay Item Search
     Given Enter item name in search box
     When Click search button
     And Click mobile brand "Apple"
-    When Select "2" number item in the list
+    When Select "1" number item in the list
     And Sliding multiple item image
-    When Select item storage capacity "64GB"
-    And Select item color "Gold"
+    When Select item storage capacity
+    And Select item color
     When Add item quantity "2"
     Then Check item available or not
 

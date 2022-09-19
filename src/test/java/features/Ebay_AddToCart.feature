@@ -11,8 +11,8 @@ Feature: Verify Add To Cart Option
     And Click mobile brand "Apple"
     When Select "2" number item in the list
     And Sliding multiple item image
-    When Select item storage capacity "64GB"
-    And Select item color "Gold"
+    When Select item storage capacity
+    And Select item color
     When Add item quantity "2"
     Then Check item available or not
 
@@ -20,6 +20,9 @@ Feature: Verify Add To Cart Option
     Given Click add to cart button
     When Increase item quantity
     Then Verity the item price
+
+
+
 
 
 
